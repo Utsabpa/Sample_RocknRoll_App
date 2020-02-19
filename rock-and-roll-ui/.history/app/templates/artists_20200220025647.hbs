@@ -1,0 +1,60 @@
+{{app-navbar data=categories getSongsByName=(action "getSongsByName") goToHome=(action "goToHome")}}
+
+<!-- app/templates/applications.hbs -->
+<div class="wrapper">
+  {{#if name}}
+    <div class="popular_A">Popular Songs of {{name}}</div>
+    <div class="slider responsive" style="opacity: 1; width: 100%; transform: translate3d(0px, 0px, 0px);">
+      {{#each song.songs as |song|}}
+        <div class="slick-slide slick-active" data-slick-index="0" style="width: 225px;">
+          {{#if (eq name 'KJ. Yesudas')}}
+            <img src="/assets/images/{{song.image}}.jpg" alt="{{song.name}}" height="300px" width="255px">
+          {{/if}}
+          {{#if  (eq name 'Sonu Nigam')}}
+            <img src="/assets/images/{{song.image}}.jpg" alt="{{song.name}}" height="300px" width="255px">
+          {{/if}}
+          {{#if (eq name 'Hariharan')}}
+            <img src="/assets/images/{{song.image}}.jpg" alt="{{song.name}}" height="300px" width="255px">
+          {{/if}}
+          <div class="music_option">
+              <button class="play" {{action 'playSong'}}>Play</button>
+              <button class="download" {{action 'downloadSong'}}>Download</button>
+            </div>
+        </div>
+      {{/each}}
+    </div>
+  {{else if category}}
+    {{#if  (eq category 'All')}}
+    	<div class="popular_A">All Popular Artists Name</div>
+    {{else}}
+       <div class="popular_A">Popular Artists Name in {{category}}</div>
+    {{/if}}
+    <div class="slider responsive" style="opacity: 1; width: 100%; transform: translate3d(0px, 0px, 0px);">
+      {{#each artist as |item|}}
+        <div class="slick-slide slick-active" data-slick-index="0" style="width: 225px;">
+          <img src="/assets/images/{{item.image}}.jpg" alt="{{item.name}}" height="300px" width="255px">
+          {{artist-action onSongs=(action "onSongs") name=item.name }}
+        </div>
+      {{/each}}
+    </div>
+  {{else}}
+    <div class="popular_A">All Songs</div>
+    <div class="slider responsive" style="margin-left: 80px;opacity: 1; width: 100%; transform: translate3d(0px, 0px, 0px);">
+      {{#each artists as |artist|}}
+        {{#each artist.songs as |item|}}
+          <div class="slick-slide slick-active" data-slick-index="0" style="width: 225px;">
+            <img src="{{item.image}}" alt="{{item.name}}" height="280px" width="255px">
+            <div class="music_option">
+              <button class="play" {{action 'playSong'}}>Play</button>
+              <button class="download" {{action 'downloadSong'}}>Download</button>
+            </div>
+          </div>
+        {{/each}}
+      {{/each}}
+    </div>
+  {{/if}}
+</div>
+
+{{app-footer}}
+
+{{md-modal-container}}

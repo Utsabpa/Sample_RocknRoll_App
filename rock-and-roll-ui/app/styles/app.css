@@ -1,0 +1,261 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: arial;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+.clear {
+  clear: both;
+}
+.wrapper {
+  max-width: 1000px;
+  height: 1000px;
+  max-height: 1100px;
+  margin: 0 auto;
+}
+.wrapper-nav{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+header {
+  background: #03b6e3;
+  color: #000000;
+  padding: 14px 0 0 0;
+  position: relative;
+  width: 100%;
+  float: left;
+  margin-bottom: 20px;
+}
+
+.left_row {
+  float: left;
+}
+
+.right_row {
+  float: right;
+}
+
+.left_row a {
+  color: #000000;
+  font-size: 22px;
+  padding-bottom: 14px;
+  display: block;
+}
+
+.right_row div {
+  display: inline-block;
+  margin: 0 0 0 20px;
+}
+
+nav a {
+  background: #000000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px 6px 0 0;
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+label.custom-select {
+  position: relative;
+  display: inline-block;
+  border-radius: 14px;
+}
+
+.custom-select select {
+  display: inline-block;
+  padding: 4px 3px 3px 5px;
+  margin: 0;
+  font: inherit;
+  outline: none;
+  line-height: 1.2;
+  background: #ffffff;
+  color: #000000;
+  border: 0;
+  border-radius: 14px;
+  width: 130px;
+}
+
+.custom-select:after {
+  content: "▼";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 60%;
+  line-height: 30px;
+  padding: 0 7px;
+  background: #ffffff;
+  color: #000000;
+  border-radius: 0 14px 14px 0;
+}
+
+.no-pointer-events .custom-select:after {
+  content: none;
+}
+
+.popular_A {
+  background: #000000;
+  color: #ffffff;
+  padding: 8px;
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.slick-slide {
+  position: relative;
+  display: inline-block;
+  margin-right: 50px;
+}
+
+#sliderLabel {
+  border: 2px solid black;
+  border-radius: 7px;
+  left: 50%;
+  cursor: pointer;
+  display: block;
+  height: 30px;
+  margin: -32px auto 0 -40px;
+  bottom: 20px;
+  overflow: hidden;
+  position: relative;
+  width: 80px;
+  position: absolute;
+}
+
+#sliderLabel input {
+  display: none;
+}
+
+#sliderLabel input:checked + #slider {
+  left: 36px;
+}
+
+#slider {
+  background: #c0c6c3;
+  -moz-border-radius: 7px;
+  display: block;
+  height: 30px;
+  left: -4px;
+  position: absolute;
+  top: 0px;
+  -moz-transition: left .25s ease-out;
+  -webkit-transition: left .25s ease-out;
+  transition: left .25s ease-out;
+  width: 48px;
+  z-index: 1;
+}
+
+#sliderOn, #sliderOff {
+  color: white;
+  display: block;
+  font-family: verdana, arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 30px;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  width: 40px;
+}
+
+#sliderOn {
+  background: #002400;
+  background: -moz-linear-gradient(top, #002400 0%, #8A3183 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #002400), color-stop(100%, #8A3183));
+  background: -webkit-linear-gradient(top, #002400 0%, #8A3183 100%);
+  background: -o-linear-gradient(top, #002400 0%, #8a3183 100%);
+  background: -ms-linear-gradient(top, #002400 0%, #8A3183 100%);
+  background: linear-gradient(top, #002400 0%, #8A3183 100%);
+  left: 0px;
+}
+
+#sliderOff {
+  background: #870000;
+  background: -moz-linear-gradient(top, #870000 0%, #ff0000 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #870000), color-stop(100%, #ff0000));
+  background: -webkit-linear-gradient(top, #870000 0%, #ff0000 100%);
+  background: -o-linear-gradient(top, #870000 0%, #ff0000 100%);
+  background: -ms-linear-gradient(top, #870000 0%, #ff0000 100%);
+  background: linear-gradient(top, #870000 0%, #ff0000 100%);
+  right: 0px;
+}
+
+.music_option {
+  position: absolute;
+  bottom: 12px;
+  width: 90%;
+  left: 50%;
+  margin: 0 auto 0 -45%;
+}
+
+.music_option span {
+  color: #ffffff;
+  padding: 4px 6px;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.music_option a {
+  color: #ffffff;
+}
+
+.play {
+  float: left;
+  background: #03b6e3;
+  width: 50px;
+  height: 26px;
+  font-size: 18px;
+}
+
+.download {
+  float: right;
+  background: #03b6e3;
+  width: 100px;
+  height: 26px;
+  font-size: 18px;
+}
+
+#footer {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 20px;
+  width: 100%;
+  background: #03b6e3;
+}
+
+#sliderLabel {
+  border: 2px solid black;
+  border-radius: 7px;
+  cursor: pointer;
+  /*display: block;*/
+  height: 30px;
+  margin: -32px auto 0 -40px;
+  bottom: 20px;
+  overflow: hidden;
+  width: 80px;
+  position: relative;
+}
+#home {
+  width: 200px;
+  height: 30px;
+  background-color: #03b6e3;
+  border-color: #03b6e3;
+  border: 0px;
+  font-size: 21px;
+}
+button:disabled {
+  background: #dddddd;
+  z-index: -1;
+}
+.disabled {
+  color: darkgrey;
+  background-color: grey;
+}

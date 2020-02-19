@@ -1,0 +1,24 @@
+<header>
+    <div class="wrapper-nav">
+      <div class="top-header">
+        <div class="left_row">
+          <button id="home" {{action "goToHome" value="{{categoryData}}"}}>
+            Rock and Roll
+          </button>
+        </div>
+        <div class="right_row">
+          <nav>
+            <div ><button id="home" {{action "goToHome"}}>Home</button></div>
+            <label class="custom-select">
+              <select onchange={{action "getSongsByName" value="target.value"}} id="tag-type-select">
+                {{#each categoryData as |category|}}
+                  <option value={{category.name}}  collection="categoryData" selected={{eq name category.name}}>{{category.name}}</option>
+                {{/each}}
+              </select>
+            </label>
+          </nav>
+        </div>
+      </div>
+    </div>
+</header>
+
